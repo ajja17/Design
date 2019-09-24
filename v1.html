@@ -1,0 +1,139 @@
+<body>
+<head>
+
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, height=device-height, initial-scale=1.0, shrink-to-fit=no">
+</head>
+     <style>
+       :root{
+--background-menu: #00865f; /* couleur menu*/
+} 
+       
+#section {
+       color: #fff;
+  background-image: linear-gradient(135deg, #232a31, #90094c, #42275a, #ff9800, #00bcd4, #009688, #283593, #795548, #485563, #FFC107, #1e88e5, #000000, #673ab7, #ff9800, #00bcd4, #7ED6DF, #FAFAFA, #795548, #CDDC39);
+       } 
+       
+#section1, #section2, #section3, #section4, #section5, #section6, #section7, #section8, #section9, #section10,
+#section11, #section12, #section13, #section14, #section15, #section16, #section17, #section18, #section19, #section20 
+       {padding-top:0px;height:630px;} 
+       
+       /*j'enlève la barre de scroll*/
+div.menu-flottant::-webkit-scrollbar {
+    display: none; 
+  
+    }
+       div.menu-flottant {
+
+        width:100%;  /* ou 360px */
+          height: 45px; 
+    position:fixed;  /*Le menu est fixe à l'écran*/
+    z-index:1000; /* Il sera au dessus de tous les éléments*/
+    top: 0%; /* Il sera à 40% du bord supérieur de l'écran*/
+	white-space: nowrap;
+    overflow: auto;
+	background-color: var(--background-menu);
+    text-transform:uppercase; /* Mettre le texte en majuscule*/
+  right: 0em;
+       }
+       
+        div.menu-flottant a {
+    display:block; /* On les définit en tant que bloc*/
+   color: #fff;  /* Couleur du texte*/
+	text-align: center;
+         padding: 10px 15px 15px 15px;
+ border-bottom: none;
+  opacity: 1;
+  
+    text-decoration: none; /* On ne veut pas qu'ils soient soulignés par exemple*/
+}
+ div.menu-flottant a:hover {
+          color: #fff;
+ border-bottom: none;
+        text-decoration: none;
+  opacity: 1;
+      }   
+       /*
+.menu-flottant ul {
+
+    list-style: none; /* Le menu est une liste, mais je ne veux pas afficher les puces*/
+ /*  margin: 0; /* Choix des marges internes et externes*/
+/*    padding: 0;
+}*/
+              
+ div.menu-flottant li {
+  display: inline-block;
+  list-style: none;
+  opacity: 0.85;
+  font-size: 15.5px;
+  color: #FFFFFF;
+        /*   height: 3.5em; /* Hauteur des items du menu*/
+       /*    padding: 1em 1em; /* Marges internes des items du menu*/
+ 
+}
+  li>a {
+  display: block;
+  margin-right: 0px;  
+    color: #fff;
+    }
+    li.active,
+li.active:hover {
+  height:calc(100% - 1px); 
+  border-bottom: 3px solid #FFF;
+ opacity: 1;
+}
+li:hover {
+  border-bottom: 3px solid #FFF;
+ height: calc(100% - 1px);
+  cursor: pointer;
+} 
+ 
+       h3 {
+         margin-left: 35px;
+        }     
+  </style>
+  <div id="section">
+<div id="section1" class="container-fluid"><h3>Résumés</h3></div>
+<div id="section2" class="container-fluid"><h3>Présence</h3></div>
+<div id="section3" class="container-fluid"><h3>Accés & Ouvrant</h3></div>
+<div id="section4" class="container-fluid"><h3>Luminaires</h3></div>
+<div id="section5" class="container-fluid"><h3>On/Off</h3></div>
+<div id="section6" class="container-fluid"><h3>Volets</h3></div>
+<div id="section7" class="container-fluid"><h3>Météo</h3></div>
+<div id="section8" class="container-fluid"><h3>Consommation</h3></div>
+<div id="section9" class="container-fluid"><h3>Températures</h3></div>
+<div id="section10" class="container-fluid"><h3 style="color:black;">Radiateur</h3></div>
+<div id="section11" class="container-fluid"><h3>section11</h3></div>
+<div id="section12" class="container-fluid"><h3>section12</h3></div>
+<div id="section13" class="tab-pane container-fluid"><h3>section13</h3></div>
+<div id="section14" class="container-fluid"><h3>section14</h3></div>
+<div id="section15" class="container-fluid"><h3>section15</h3></div>
+<div id="section16" class="container-fluid"><h3>section16</h3></div>
+<div id="section17" class="container-fluid"><h3>section18</h3></div>
+<div id="section18" class="tab-pane container-fluid"><h3>Scénarios</h3></div>
+<div id="section19" class="container-fluid"><h3>section19</h3></div>
+<div id="section20" class="tab-pane container-fluid"><h3>le bas</h3></div>
+  </div>
+<script>
+
+  
+// pour cacher la scroll bar
+// $("body").css("overflow", "hidden");
+var $log = $( ".div_displayObject" ),
+  str2 =
+    '                                                           \
+      <div class="menu-flottant">								\
+<li><a href="#section1"><span>ACCUEIL</span></a></li>                         \
+<li><a href="#section2"><span>DEHORS</span></a></li> 							\
+<li><a href="#section7"><span>chambre 1</span></a></li>					\
+<li><a href="#section20"><span>chambre 2</span></a></li>					\
+<li><a href="#section19"><span>chambre 3</span></a></li>					\
+</div>	\
+    '
+    html = $.parseHTML( str2 ),
+ $log.append( html );
+  
+
+</script>
+
+</body>
