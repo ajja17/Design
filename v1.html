@@ -6,7 +6,7 @@
 </head>
      <style>
        :root{
---background-menu: #00865f; /* couleur menu*/
+--background-menu-v1: #00865f; /* couleur menu*/
 } 
        
 #section {
@@ -32,7 +32,7 @@ div.menu-flottant::-webkit-scrollbar {
     top: 0%; /* Il sera à 40% du bord supérieur de l'écran*/
 	white-space: nowrap;
     overflow: auto;
-	background-color: var(--background-menu);
+	background-color: var(--background-menu-v1);
     text-transform:uppercase; /* Mettre le texte en majuscule*/
   right: 0em;
        }
@@ -44,7 +44,6 @@ div.menu-flottant::-webkit-scrollbar {
          padding: 10px 15px 15px 15px;
  border-bottom: none;
   opacity: 1;
-  
     text-decoration: none; /* On ne veut pas qu'ils soient soulignés par exemple*/
 }
  div.menu-flottant a:hover {
@@ -53,13 +52,7 @@ div.menu-flottant::-webkit-scrollbar {
         text-decoration: none;
   opacity: 1;
       }   
-       /*
-.menu-flottant ul {
-
-    list-style: none; /* Le menu est une liste, mais je ne veux pas afficher les puces*/
- /*  margin: 0; /* Choix des marges internes et externes*/
-/*    padding: 0;
-}*/
+       
               
  div.menu-flottant li {
   display: inline-block;
@@ -67,29 +60,29 @@ div.menu-flottant::-webkit-scrollbar {
   opacity: 0.85;
   font-size: 15.5px;
   color: #FFFFFF;
-        /*   height: 3.5em; /* Hauteur des items du menu*/
-       /*    padding: 1em 1em; /* Marges internes des items du menu*/
- 
 }
+       
   li>a {
   display: block;
   margin-right: 0px;  
     color: #fff;
-    }
+		}
+       
     li.active,
 li.active:hover {
-  height:calc(100% - 1px); 
-  border-bottom: 3px solid #FFF;
- opacity: 1;
-}
-li:hover {
-  border-bottom: 3px solid #FFF;
- height: calc(100% - 1px);
-  cursor: pointer;
-} 
+	height:calc(100% - 1px); 
+	border-bottom: 3px solid #FFF;
+	opacity: 1;
+		}
+       
+	li:hover  {
+border-bottom: 3px solid #FFF;
+height: calc(100% - 1px);
+cursor: pointer;
+		} 
  
-       h3 {
-         margin-left: 35px;
+	h3 {
+margin-left: 35px;
         }     
   </style>
   <div id="section">
@@ -116,24 +109,18 @@ li:hover {
   </div>
 <script>
 
-  
-// pour cacher la scroll bar
-// $("body").css("overflow", "hidden");
 var $log = $( ".div_displayObject" ),
   str2 =
-    '                                                           \
-      <div class="menu-flottant">								\
-<li><a href="#section1"><span>ACCUEIL</span></a></li>                         \
-<li><a href="#section2"><span>DEHORS</span></a></li> 							\
-<li><a href="#section7"><span>chambre 1</span></a></li>					\
-<li><a href="#section20"><span>chambre 2</span></a></li>					\
-<li><a href="#section19"><span>chambre 3</span></a></li>					\
+    '	\
+      <div class="menu-flottant">	\
+<li><a href="#section1"><span>ACCUEIL</span></a></li>	\
+<li><a href="#section2"><span>DEHORS</span></a></li>	\
+<li><a href="#section7"><span>chambre 1</span></a></li>	\
+<li><a href="#section20"><span>chambre 2</span></a></li>	\
+<li><a href="#section19"><span>chambre 3</span></a></li>	\
 </div>	\
     '
-    html = $.parseHTML( str2 ),
- $log.append( html );
-  
-
+	html = $.parseHTML( str2 ),
+	$log.append( html );
 </script>
-
 </body>
