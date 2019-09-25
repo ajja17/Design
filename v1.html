@@ -3,11 +3,22 @@
 
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, height=device-height, initial-scale=1.0, shrink-to-fit=no">
-<meta name="theme-color" content="#00865f">
+  
+  <!-- BARRE DE NAVIGATION -->
+  <!-- Chrome -->
+  <meta name="theme-color" content="var(--background-menu-v1)"> 
+  <!-- Windows Phone -->
+<meta name="msapplication-navbutton-color" content="var(--background-menu-v1)"> 
+  <!-- iOS Safari -->
+<meta name="apple-mobile-web-app-capable" content="yes">
+<meta name="apple-mobile-web-app-status-bar-style" content="black-translucent"> 
+  
+
   </head>
   
 
      <style>
+       
 	:root{
 --background-menu-v1: #00865f; /* couleur menu*/
 	} 
@@ -164,5 +175,12 @@ var $log = $( ".div_displayObject" ),
     '
 	html = $.parseHTML( str2 ),
 	$log.append( html );
+
+
+
+    var metaThemeColor = document.querySelector("meta[name=theme-color]");
+    metaThemeColor.setAttribute("content", "#00865f");
+
+
 </script>
 </body>
