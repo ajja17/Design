@@ -18,23 +18,41 @@ background-image: linear-gradient(135deg, #232a31, #90094c, #42275a, #ff9800, #0
 #section11, #section12, #section13, #section14, #section15, #section16, #section17, #section18, #section19, #section20 
 {padding-top:0px;height:630px;} 
        
-       /*j'enlève la barre de scroll*/
+       /*je cache la barre de scroll du menu*/
 	div.menu-flottant::-webkit-scrollbar {
 display: none; 
     }
-	     
+  
+              /*j'enlève la barre de scroll en portable */
+@media only screen and (min-width: 300px) {
 	div.menu-flottant {
 width:100%;  /* ou 360px */
+background-color: var(--background-menu-v1);
+right: 0em;
+       }
+  /*j'interdit de pouvoir scroller en portable */
+  body {
+    overflow: hidden;
+      }
+  }
+       
+@media only screen and (min-width: 768px) {
+		div.menu-flottant {
+width:500px;  /* ou 360px */
+background-color:#33b5e5;
+right: -8em;
+       }   
+  }
+       
+      		div.menu-flottant {
 height: 45px; 
 position:fixed;  /*Le menu est fixe à l'écran*/
 z-index:1000; /* Il sera au dessus de tous les éléments*/
 top: 0%; /* Il sera à 0% du bord supérieur de l'écran*/
 white-space: nowrap;
 overflow: auto;
-background-color: var(--background-menu-v1);
-text-transform:uppercase; /* Mettre le texte en majuscule*/
-right: 0em;
-       }
+       }  
+       
        
         div.menu-flottant a {
 display:block; /* On les définit en tant que bloc*/
@@ -113,11 +131,29 @@ var $log = $( ".div_displayObject" ),
   str2 =
     '\
       <div class="menu-flottant">	\
-<li><a href="#section1"><span>ACCUEIL</span></a></li>	\
-<li><a href="#section2"><span>DEHORS</span></a></li>	\
-<li><a href="#section7"><span>chambre 1</span></a></li>	\
-<li><a href="#section20"><span>chambre 2</span></a></li>	\
-<li><a href="#section19"><span>chambre 3</span></a></li>	\
+   <li><a href="/index.php?v=d&p=dashboard"> \
+  <img style="" src="/core/img/logo-jeedom-sans-nom-blanc.svg" height=25  /> \
+  </a></li> \
+<li><a href="#section1"><span>Accueil</span></a></li>	\
+<li><a href="#section2"><span>Présence</span></a></li>	\
+<li><a href="#section3"><span>section3</span></a></li>	\
+<li><a href="#section4"><span>section4</span></a></li>	\
+<li><a href="#section5"><span>section5</span></a></li>	\
+<li><a href="#section6"><span>section6</span></a></li>	\
+<li><a href="#section7"><span>section7</span></a></li>	\
+<li><a href="#section8"><span>section8</span></a></li>	\
+<li><a href="#section9"><span>section9</span></a></li>	\
+<li><a href="#section10"><span>section10</span></a></li>	\
+<li><a href="#section11"><span>section11</span></a></li>	\
+<li><a href="#section12"><span>section12</span></a></li>	\
+<li><a href="#section13"><span>section13</span></a></li>	\
+<li><a href="#section14"><span>section14</span></a></li>	\
+<li><a href="#section15"><span>section15</span></a></li>	\
+<li><a href="#section16"><span>section16</span></a></li>	\
+<li><a href="#section17"><span>section17</span></a></li>	\
+<li><a href="#section18"><span>section18</span></a></li>	\
+<li><a href="#section19"><span>section19</span></a></li>	\
+<li><a href="#section20"><span>section20</span></a></li>	\
 </div>	\
     '
 	html = $.parseHTML( str2 ),
