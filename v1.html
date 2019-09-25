@@ -23,7 +23,7 @@ background-image: linear-gradient(135deg, #232a31, #90094c, #42275a, #ff9800, #0
 display: none; 
     }
   
-              /*j'enlève la barre de scroll en portable */
+              /*je place le menu au centre couleur vert pour Portable */
 @media only screen and (min-width: 300px) {
 	div.menu-flottant {
 width:100%;  /* ou 360px */
@@ -36,7 +36,9 @@ right: 0em;
       }
   }
        
-@media only screen and (min-width: 768px) {
+	     /*je place le menu à droite, couleur bleu pour PC */
+@media only screen and (min-width: 992px) {
+  /* Large devices (laptops/desktops, 992px and up) */
 		div.menu-flottant {
 width:500px;  /* ou 360px */
 background-color:#33b5e5;
@@ -125,6 +127,7 @@ margin-left: 35px;
 <div id="section19" class="container-fluid"><h3>section19</h3></div>
 <div id="section20" class="tab-pane container-fluid"><h3>le bas</h3></div>
   </div>
+	
 <script>
 
 var $log = $( ".div_displayObject" ),
