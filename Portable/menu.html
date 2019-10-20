@@ -1,0 +1,265 @@
+<html>
+<head>
+
+  <meta charset="utf-8">
+<meta id="jeedomViewport" name="viewport" content="width=device-width,heigh=device-heigh,user-scalable=0," /> 
+
+
+  <script>
+        // 1 attribution du planHeader_id
+var plan=94;
+    
+var mvp = document.getElementById('jeedomViewport');   
+       if (screen.width >= 920) {}
+  else {    	
+
+    var scaleX = screen.width / 360;
+   mvp.setAttribute('content','initial-scale='+scaleX+'; user-scalable=0;');
+   }
+    
+// assignation 
+document.getElementById('planID').setAttribute('onclick', 'planHeader_id='+plan+'; displayPlan();');
+
+  </script>
+  <style>
+
+    @media only screen and (min-width: 300px) and (max-width: 900px){
+html,body {
+
+  overflow-x: hidden; 
+   -webkit-overflow-scrolling: touch; /* enables momentum scrolling in iOS overflow elements */
+
+      }
+
+  body::-webkit-scrollbar {display: none; }
+}
+
+#section1, #section2, #section3, #section4, #section5, #section6, #section7, #section8, #section9, #section10,
+#section11, #section12, #section13, #section14, #section15, #section16, #section17, #section18, #section19, #section20 
+{padding-top:0px;width:360px;float:left;height:45px;background: linear-gradient(135deg, #80DEEA 0%, #283593 100%);color: #fff;} 
+
+
+	#section2 {background: #6200EE;}
+	#section3 {background: #ff9800;}
+	#section4 {background: #00bcd4;}
+
+	#section5 {background: linear-gradient(135deg, #dce7ef 0%, #83adc9 30%, #6599bc 100%);} 
+	#section6 {background: linear-gradient(135deg, #E8ECEE 0%, #9CB2BC 30%, #607D8B 100%);}
+	#section7 {background: linear-gradient(135deg, #E9E2F4 0%, #A284D5 30%, #673AB7 100%);}
+
+	#section9 {background: linear-gradient(135deg, #fef1ee 0%, #faa78f 30%, #f5410e 100%);}
+
+    #section10 {background: #00bcd4;}
+
+
+          div#section a {
+            display:inline-block;
+padding: 10px;
+text-decoration: none;
+padding: 10px 15px 15px 15px;
+border-bottom: none;
+opacity: 1;
+           } 
+              div#section img {
+                     display: inline-block;
+text-decoration: none;
+padding: 0px 0px 5px 10px;
+           } 
+    
+    div#section span {
+    font-family: "Roboto-Regular", cursive, sans-serif;
+             font-weight: 100;
+          color: #fff;
+vertical-align: top;
+   text-align: center;
+   font-size: 25px;   
+     display: inline-block;
+  width: 75%;
+       }  
+    
+    /* couleur fond blanc*/
+    .div_displayObject {
+      background-color: #efefef;
+    }  
+
+               .menu-flottant {
+                 
+    width:13.3em; /* Largeur des items du menu*/
+    float: right; /* Je veux que le menu soit à droite*/
+    position:fixed; /* Le menu est fixe à l'écran*/
+    z-index:1000; /* Il sera au dessus de tous les éléments*/
+    top: 5px; /* Il sera à 40% du bord supérieur de l'écran*/
+    font-size: 1em; /* Taille de la police*/
+    line-height: 1.5px; /* Hauteur de ligne du menu*/
+  /*  color: black;  Couleur de la police*/
+    font-weight:700; /* Mettre le texte en gras*/
+    text-transform:uppercase; /* Mettre le texte en majuscule*/
+    right: -9.5em; /* Décalage du menu sur la droite pour masquer le texte et ne laisser que les icônes de visibles*/
+    }
+.menu-flottant ul {
+    list-style: none; /* Le menu est une liste, mais je ne veux pas afficher les puces*/
+    margin: 0; /* Choix des marges internes et externes*/
+    padding: 0;
+	background: rgba(255,255,255,.1);
+	background: linear-gradient( rgba(255,255,255,.9), rgba(255,255,255,.4) 15% );
+	border-radius: 5px;
+border: 1px solid rgba(255,255,255,.3);
+/*  filter: blur(10px);  */
+
+}
+.menu-flottant ul li {
+    display:block; /* Définition des items en tant que bloc*/
+  /*   background-color: #283593;  */
+	background:  rgba(255,255,255,.8);
+
+
+
+
+
+    height: 3.2em; /* Hauteur des items du menu*/
+    padding: 1em 1em; /* Marges internes des items du menu*/
+    position: relative; /* On leur attribut une position relative*/
+    -webkit-transition: -webkit-transform 0.5s; /* Effet de déplacement au passage de la souris*/
+    -moz-transition: -webkit-transform 0.5s; /* On le définit plusieurs fois pour assurer la compatibilité entre les navigateurs*/
+	transition: transform .5s;
+   color: gray; /*Couleurs de fond des items du menu*/
+}
+/*
+.menu-flottant ul li:nth-child(1),.menu-flottant ul li:nth-child(1),.menu-flottant ul li:nth-child(3),.menu-flottant ul li:nth-child(4),
+.menu-flottant ul li:nth-child(5),.menu-flottant ul li:nth-child(6),.menu-flottant ul li:nth-child(7)
+    { 
+  color: gray; 
+} */
+
+/* Si vous en avez plus de 3, ajouteZ ici les mêmes lignes en remplaçant les chiffres et couleurs*/
+
+/* Création de la transformation CSS qui permet d'afficher le menu au passage de la souris*/
+.menu-flottant ul li:hover {
+    -webkit-transform: translateX(-9.5em);
+    transform: translateX(-9.5em);
+}
+
+/* Mise en forme des liens du menu*/
+.menu-flottant ul li a {
+    display:block; /* On les définit en tant que bloc*/
+   color: white;  /* Couleur du texte*/
+  text-shadow: 0 1px 2px #000;
+    text-decoration: none; /* On ne veut pas qu'ils soient soulignés par exemple*/
+    position: absolute; /* On leur attribut une position absolue*/
+    font-size:1em; /* Taille de la police*/
+    line-height: 1.5em; /* Hauteur de ligne*/
+    height:2em; /* Hauteur*/
+    top:0; /* Positionnement*/
+    bottom:0;
+    right: 0.3em;
+    margin:0 auto;
+    padding:1em 0.5em;
+}
+    /* Mise en forme des icônes du menu*/
+  .menu-flottant ul li span {
+    float: left;  /* On les cale à gauche */
+    line-height: 1.5em; /* Hauteur de ligne */
+    height:2em;
+    padding-bottom: 0.8em;
+  } 
+    
+  </style>
+  </head>
+<body>
+
+<div id="section">
+<div id="section1"><a id="planID"><img src="/core/img/logo-jeedom-sans-nom-blanc.svg" height=35/></a><span>Tableau de bord</span></div>
+<div id="section2"><a href="#section1" class="fa icomoon-arrow-left2 fa-2x"></a><span>lab_test</span></div>
+<div id="section3"><a href="#section1" class="fa icomoon-arrow-left2 fa-2x"></a><span>Salon</span></div>
+<div id="section4"><a href="#section1" class="fa icomoon-arrow-left2 fa-2x"></a><span>Cuisine</span></div>
+<div id="section5"><a href="#section1" class="fa icomoon-arrow-left2 fa-2x"></a><span>Chambres</span></div>
+<div id="section6"><a href="#section1" class="fa icomoon-arrow-left2 fa-2x"></a><span>Garage</span></div>
+<div id="section7"><a href="#section1" class="fa icomoon-arrow-left2 fa-2x"></a><span>Dehors</span></div>
+
+<div id="section8"><a href="#section1" class="fa icomoon-arrow-left2 fa-2x"></a><span>Présences</span></div>
+
+<div id="section9"><a href="#section1" class="fa icomoon-arrow-left2 fa-2x"></a><span>Chauffage</span></div>
+<div id="section10"><a href="#section1" class="fa icomoon-arrow-left2 fa-2x"></a><span>Volet Roulant</span></div>
+<div id="section11"><a href="#section1" class="fa icomoon-arrow-left2 fa-2x"></a><span>Consommation</span></div>
+<div id="section12"><a href="#section1" class="fa icomoon-arrow-left2 fa-2x"></a><span>Salle de bain</span></div>
+<div id="section13"><a href="#section1" class="fa icomoon-arrow-left2 fa-2x"></a><span>Salle à manger</span></div>
+<div id="section14"><a href="#section1" class="fa icomoon-arrow-left2 fa-2x"></a><span>Entrée</span></div>
+<div id="section15"><a href="#section1" class="fa icomoon-arrow-left2 fa-2x"></a><span>section15</span></div>
+<div id="section16"><a href="#section1" class="fa icomoon-arrow-left2 fa-2x"></a><span>section16</span></div>
+<div id="section17"><a href="#section1" class="fa icomoon-arrow-left2 fa-2x"></a><span>section17</span></div>
+<div id="section18"><a href="#section1" class="fa icomoon-arrow-left2 fa-2x"></a><span>section18</span></div>
+<div id="section19"><a href="#section1" class="fa icomoon-arrow-left2 fa-2x"></a><span>section19</span></div>
+<div id="section20"><a href="#section1" class="fa icomoon-arrow-left2 fa-2x"></a><span>section20</span></div>
+  
+    </div>
+
+<script>
+
+var $log = $( ".div_displayObject" ),
+  str2 =
+    '                                                           \
+      <div class="menu-flottant">								\
+		<ul>																								\
+<li><span class="iconCmdMouv"><i style="position: relative;right:5px;bottom:5px;"class="fa jeedom-mouvement fa-2x"></i></span>	\
+  <span class="stateMouv"></span>	\
+  <a href="#section2">Mouvement</a></li>	\
+    \
+<li><span class="iconCmdPrez"><i style="position: relative;right:3px;bottom:5px;"class="fa personne-toilet1 fa-2x"></i></span> \
+<span class="statePrez" style="margin-left: 1px;"></span> 	\
+<a href="#section8">Presences</a></li>	\
+     \
+<li><span class="iconCmdPorte"><i style="position: relative;right:1px;bottom:5px;" class="fa jeedom-porte-ferme fa-2x"></i></span> \
+<span class="statePorte" style="margin-left: 6px;"></span> 	\
+<a href="#section7">Portes</a></li>					\
+	\
+<li><span class="iconCmdVR"><i style="position: relative;right:2px;bottom:5px;" class="fa jeedom-volet-ferme fa-2x"></i></span>		\				\
+<span class="stateVR" style="margin-left: 4px;"></span>							\
+<a href="#section10">Volet Roulant</a></li>								\
+	\
+<li><span class="iconCmdFenetre"><i style="position: relative;right:2px;bottom:5px;" class="fa jeedom-fenetre-ferme fa-2x"></i></span>		\				\
+<span class="stateFenetre" style="margin-left: 4px;"></span>							\
+<a href="#section10">Fenêtres</a></li>								\
+	\
+<li><span class="iconCmdGarage"><i style="position: relative;right:5px;bottom:5px;" class="fa jeedom-garage-ferme fa-2x"></i></span>		\				\
+<span class="stateGarage" style="margin-left: 0px;"></span>							\
+<a href="#section6">Portes Garages</a></li>								\
+							\
+<li><span class="iconCmdHum"><i style="position: relative;right:5px;bottom:5px;" class="fa fa maison-bathtub3 fa-2x"></i></span>		\				\
+<span class="stateHum" style="margin-left: -5px;"></span>							\
+<a href="#section12">Humidité Sdb</a></li>								\
+		\
+<li><span class="iconCmdVmc"><i style="position: relative;right:3px;bottom:5px;"class="fa fa-power-off fa-2x"></i></span> \
+<span class="stateVmc" style="margin-left: 5px;"></span> 	\
+<a href="#section12">VMC</a></li>	\
+     \
+<li><span class="iconCmdPrises"><i style="position: relative;right:3px;bottom:5px;"class="fa jeedom-prise fa-2x"></i></span> \
+<span class="statePrises" style="margin-left: 7px;"></span> 	\
+<a href="#section2">Prises</a></li>	\
+     \
+<li><span class="iconCmdLum"><i style="position: relative;right:3px;bottom:5px;"class="fa jeedom2-bulb14 fa-2x"></i></span> \
+<span class="stateLum" style="margin-left: 0px;"></span> 	\
+<a href="#section2">Lumières</a></li>	\
+     \
+<li><span class="iconCmdOrdi"><i style="position: relative;right:3px;bottom:5px;"class="fa techno-pc fa-2x"></i></span> \
+<span class="stateOrdi" style="margin-left: 0px;"></span> 	\
+<a href="#section2">Ordinateurs</a></li>	\
+     \
+<li><span class="iconCmdECS"><i style="position: relative;right:3px;bottom:5px;"class="fa fa-tint fa-2x"></i></span> \
+<span class="stateECS" style="margin-left: 0px;"></span> 	\
+<a href="#section9">Eau Chaude</a></li>	\
+     \
+<li><span class="iconCmdChaud"><i style="position: relative;right:3px;bottom:5px;"class="fa techno-heating3 fa-2x"></i></span> \
+<span class="stateChaud" style="margin-left: 0px;"></span> 	\
+<a href="#section9">Chaudière</a></li>	\
+     \
+</ul></div>	\
+    '
+    html = $.parseHTML( str2 ),
+ $log.append( html );
+  $("#section").click(function() {
+ //   alert("click"); 
+   $( ".menu-flottant" ).toggle();
+});
+
+</script>
+  </body></html>
