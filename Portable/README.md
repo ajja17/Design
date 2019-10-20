@@ -1,3 +1,11 @@
+
+<img src="Doc/Screenshot_20191020-134959_Chrome.jpg" /> Visu Portable
+<img src="Doc/Screenshot_20191020-135921_Chrome.jpg" />
+
+Visu Bureau
+
+<img src="Doc/Screenshot_20191020-141623_Chrome.jpg" />
+
 Taille du Design
 * LxH = 7200 x 3400
 
@@ -18,6 +26,6 @@ widget icon résumé
 * binaire_on (icon et couleur), 
 * name_design (pour report menu flottant) avec pour préfix state et iconCmd
 
-<img src="Param_icon_resum.png" alt="temps"/>
+<img src="Param_icon_resum.png" />
 
 
