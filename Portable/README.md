@@ -12,3 +12,9 @@ poxition X : 0
 position Y : 14.127906976744
 largeur px : 360
 Hauteur px : 125
+
+widget icon résumé
+binaire_off (icon et couleur), 
+binaire_on (icon et couleur), 
+name_design (pour report menu flottant) avec pour préfix state et iconCmd
+
