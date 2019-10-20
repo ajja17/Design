@@ -1,8 +1,14 @@
 Taille du Design
 LxH = 7200 x 3400
 
-Taille du html menu
+Taille du menu flottant
 poxition X : 0
 position Y : 0
 largeur px : 7200
 Hauteur px : 45
+
+Taille du menu image
+poxition X : 0
+position Y : 14.127906976744
+largeur px : 360
+Hauteur px : 125
