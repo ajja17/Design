@@ -1,0 +1,79 @@
+<!-- WIDGET SPECIFIQUE adapté des widgets standards "cmd.info.numeric.default" et "cmd.action.slider.default"
+Modifications : 
+div centre
+
+Paramètres optionnels widget :
+binaire_off = default fa-power-off red
+binaire_on = default fa-power-off green
+#name_design# = 
+-->
+
+
+<div class="cmd container-fluid tooltips cmd cmd-widget" data-type="info" data-subtype="numeric" data-cmd_id="#id#" data-cmd_uid="#uid#" data-version="#version#">
+<div class="resum#id#" style="text-align: center;">
+   <span class="iconCmd#id#" style="font-size: 25px;"></span>
+     <span class="state#id#" style="font-size: 15px;vertical-align: top;margin-left: 5px"></span> #unite#
+ </div>
+       <script>
+testbinaire_off = ("#binaire_off#" == '#'+'binaire_off#');
+if (testbinaire_off == true) {
+  var binaire_off = "fa-power-off,red";
+} else { 
+  var binaire_off = '#binaire_off#';
+}
+
+var off = binaire_off.split(",");
+var off_icon#id# = (off[0]) ; 
+var off_color#id# = (off[1]) ; 
+
+testbinaire_on = ("#binaire_on#" == '#'+'binaire_on#');
+if (testbinaire_on == true) {
+  var binaire_on = "fa-power-off,green";
+} else { 
+  var binaire_on = '#binaire_on#';
+}
+
+var on = binaire_on.split(",");
+var on_icon#id# = (on[0]) ; 
+var on_color#id# = (on[1]) ; 
+
+
+       jeedom.cmd.update['#id#'] = function(_options){
+
+$('.cmd[data-cmd_id=#id#]').attr('title','Valeur du '+_options.valueDate+', collectée le '+_options.collectDate)
+$('.cmd[data-cmd_id=#id#] .state#id#').empty().append(_options.display_value);
+
+test_design#id# = ("#name_design#" == '#'+'name_design#');
+if (test_design#id# == false) {
+var state#id# = "state"+'#name_design#' ;
+var iconCmd#id# = "iconCmd"+'#name_design#' ;
+$('.'+state#id#).empty().append(_options.display_value);
+}     
+
+
+         
+         
+//  $(".state#id#").css('color', ''); 
+  if (_options.display_value == '0' ) {
+  $(".resum#id#").css('color', off_color#id#);  
+ $('.'+state#id#).css('color', '');   
+$('.'+iconCmd#id#).css('color', ''); 
+ $(".iconCmd#id#") .empty().append('<i class="fa '+off_icon#id#+'">');    
+
+}else if (_options.display_value >= '1' ) { 
+$(".resum#id#").css('color', on_color#id#); 
+ $('.'+state#id#).css('color', on_color#id#); 
+$('.'+iconCmd#id#).css('color', on_color#id#);
+$(".iconCmd#id#") .empty().append('<i class="fa '+on_icon#id#+'">');    
+
+//  $(".resum#id#").css('color', '#E91E63'); 
+// $(".iconCmd#id#") .empty().append('<i class="fa '+binaire_off#id#+'">');    
+ // $(".state#id#").css('color', '#E91E63');
+//  $(".iconCmd#id#") .empty().append('<i class="fa fa-power-off" style="color:#E91E63;"</i>');  
+                                  
+//     $('.OnOffIcon', window.parent.document).empty().append('<i class="fa fa-power-off fa-2x" style="color:#e6e6e6;"</i>');;
+//     $('.OnOffNumb', window.parent.document).empty().append("").css('color','#e6e6e6'); // page enfant}
+}}
+jeedom.cmd.update['#id#']({display_value:'#state#',valueDate:'#valueDate#',collectDate:'#collectDate#',alertLevel:'#alertLevel#'});
+</script>
+</div>
