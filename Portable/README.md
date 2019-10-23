@@ -1,9 +1,7 @@
-
 DESIGN POUR JEEDOM V3
+
 <-- Actualisation :
 24/10/2019 : menu image : ajout scroll souris PC
-
-
 -->
 
 <img src="Doc/Screenshot_20191020-134959_Chrome.jpg" /> Visu Portable
