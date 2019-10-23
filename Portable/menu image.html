@@ -107,7 +107,15 @@ perso/design/portable/salle_manger.png
    <li><a href="#section7">
      <img src="https://raw.githubusercontent.com/ajja17/Design/master/image/exterieu.png" height=100  />
      </a></li>
-   
-
                 </div> 
-  </body></html>
+<script>
+
+$(document).ready(function () {
+    $('.swapmenu2').mousewheel(function(e, delta) {
+        this.scrollLeft -= (delta * 40);
+        e.preventDefault();
+    });
+    
+    });
+  </script>
+	</body></html>
