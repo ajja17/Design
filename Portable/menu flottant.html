@@ -59,6 +59,7 @@ text-decoration: none;
 padding: 10px 15px 15px 15px;
 border-bottom: none;
 opacity: 1;
+             color:white;
            } 
               div#section img {
                      display: inline-block;
@@ -256,10 +257,57 @@ var $log = $( ".div_displayObject" ),
     '
     html = $.parseHTML( str2 ),
  $log.append( html );
-  $("#section").click(function() {
- //   alert("click"); 
-   $( ".menu-flottant" ).toggle();
-});
+    
+/*=================================*/
+/*=== Swipe pour cacher/montrer ===*/
+/*=================================*/
+// Si l'Ã©cran est plus petit que "x" pixels (optionnel) // 1024px ici
+if(screen.width <= 1024) {
+	var startX = 0; // Position de dÃ©part
+	var distance = 250; // 100 px de swipe pour afficher le menu
 
+	// Au premier point de contact
+	window.addEventListener("touchstart", function(evt) {
+		// Récupére les "touches" effectuées
+		var touches = evt.changedTouches[0];
+		startX = touches.pageX;
+		between = 0;
+	}, false);
+
+	// Quand les points de contact sont en mouvement
+	window.addEventListener("touchmove", function(evt) {
+		// Limite les effets de bord avec le tactile...
+		evt.preventDefault();
+		evt.stopPropagation();
+	}, false);
+
+	// Quand le contact s'arrête
+	window.addEventListener("touchend", function(evt) {
+		var touches = evt.changedTouches[0];
+		var between = touches.pageX - startX;
+
+		// Détection de la direction
+		if(between > 0) {
+			var orientation = "droite";
+		} else {
+			var orientation = "gauche";
+		}
+
+		// effet pour le menu slide
+		if(Math.abs(between) >= distance && orientation == "droite") {
+          $( ".menu-flottant" ).fadeOut( "slow" );
+		}
+		if(Math.abs(between) >= distance && orientation == "gauche") {
+          $( ".menu-flottant" ).fadeIn( "slow" );
+		}
+	}, false);
+}
+    
+/*======================*/
+/*=== Cacher au clic ===*/
+/*======================*/
+    $(".menu-flottant ul li a").click(function() {
+          $( ".menu-flottant" ).fadeOut( "slow" );
+});  
 </script>
   </body></html>
