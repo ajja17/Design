@@ -1,13 +1,12 @@
 DESIGN POUR JEEDOM V3
-
-<-- Actualisation :
+Actualisation :
 
 02/11/2019 : barre de menu :
 - disparaît en fondu lorsqu'on clic sur un élément la composant ;
 - apparition / disparition avec un swipe droite / gauche .
 
 24/10/2019 : menu image : ajout scroll souris PC
--->
+
 
 <img src="Doc/Screenshot_20191020-134959_Chrome.jpg" /> Visu Portable
 <img src="Doc/Screenshot_20191020-135921_Chrome.jpg" />
